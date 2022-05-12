@@ -1,6 +1,7 @@
 import re
 import subprocess
 from datetime import datetime
+from notification import msg
 
 # 报警阈值
 threshold = 60
@@ -43,3 +44,4 @@ if __name__ == "__main__":
     if alert:
         message += f"告警列表:\n" + alert_str
     print(message)
+    msg(message)
